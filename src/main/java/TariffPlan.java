@@ -1,4 +1,5 @@
 public class TariffPlan {
+    private int id;
     private String name;
     private int priceInRubles;
     private boolean pricePerMonth;
@@ -6,7 +7,8 @@ public class TariffPlan {
     private Call call;
     private Sms sms;
 
-    TariffPlan(String name, int price, boolean pricePerMonth, Internet internet, Call call, Sms sms) {
+    TariffPlan(int id, String name, int price, boolean pricePerMonth, Internet internet, Call call, Sms sms) {
+        this.id = id;
         this.name = name;
         this.priceInRubles = price;
         this.pricePerMonth = pricePerMonth;
@@ -18,7 +20,8 @@ public class TariffPlan {
     @Override
     public String toString() {
         return  name +
-                " {priceInRubles=" + priceInRubles +
+                " {id=" + id +
+                ", priceInRubles=" + priceInRubles +
                 ", pricePerMonth=" + pricePerMonth +
                 ", internet=" + internet +
                 ", call=" + call +
